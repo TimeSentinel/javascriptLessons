@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Sandwich Travel</title>
+    <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Flying Sandwich Travel</h1>
+        <ul>
+            <li><a href="./index.html" id="home">Home </a></li>
+            <li><a href="./travel_contact.html" id="contact">Contact Us </a></li>
+            <li><a href="./travel_about.html" id="about">About Us </a></li>
+            <li> </li>
+            <!--
+                <li style="padding-left:40px; padding-top:14px; padding-right: 40px;"><input class="search__input" type="text" id="searchInput" placeholder="Search Destinations"> </li>
+                <li style="padding-top:14px; ""><button class="button-32" role="button" id='btnSearch' type="submit">Search</button></li>
+                <li style="padding-top:14px; ""><button class="button-32" role="button" id='btnClear'>Clear</button></li>
+            -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main_body" id="returnMSG">
+            <H2>Contact Us</H2><br />
+        </div>
+        <div class="result" id="thisform">
+            
+                Name <input type="text" id="contactName"><br /><br />
+                Email <input type="text" id="contactEmail"><br /><br />
+                Message<br /><textarea name="contactText1" cols="40" rows="5"></textarea><br /><br />
+                <button id="btnSend" class=" button-32" width="50">Send</button><br /><br />
+                <hr align="left">
+
+            
+        </div>
+    </div>
+
+    <script src="./travel_recommendation.js"></script>
+    <script>
+        function contactMonkey() { //Contact Us Code
+            document.getElementById('thisform').innerHTML += "<p>Message sent successfully!</p>";
+            document.getElementById("contactName").value = "";
+            document.getElementById('contactEmail').value = "";
+            document.getElementById('contactText1').value = "";
+        }
+        btnSend.addEventListener('click', contactMonkey);
+    </script>
+</body>
+
+
+
+
+</html>
